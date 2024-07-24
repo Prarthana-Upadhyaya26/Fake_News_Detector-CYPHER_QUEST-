@@ -7,7 +7,7 @@ from langchain_google_genai import GoogleGenerativeAI  # Assuming correct import
 from googletrans import Translator  # Import googletrans library
 
 # Configure Google Generative AI
-GEMINI_API_KEY = "AIzaSyBxsNgKI-TQbKVi8qZyij9RICZJCqgOpbw"
+GEMINI_API_KEY = "GEMINI_API_KEY"
 os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
 generation_config = {

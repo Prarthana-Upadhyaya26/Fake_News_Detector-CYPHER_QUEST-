@@ -11,7 +11,7 @@
 import sys
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import GoogleGenerativeAI
-GEMINI_API_KEY = "AIzaSyBxsNgKI-TQbKVi8qZyij9RICZJCqgOpbw"
+GEMINI_API_KEY = "GEMINI_API_KEY"
 
 generation_config = {
     "temperature": 0.2,   # Lower temperature for more conservative and precise outputs

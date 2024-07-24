@@ -25,7 +25,7 @@ def classify_image(image_path, model):
         return predicted.item()
 
 # Main script
-if _name_ == "_main_":
+if __name__ == "_main_":
     if len(sys.argv) != 2:
         print("Usage: python detect_fake_image.py <image_path>")
         sys.exit(1)

@@ -10,7 +10,7 @@ from langchain.prompts import PromptTemplate
 from langchain_google_genai import GoogleGenerativeAI
 
 # Configure Google Generative AI
-GEMINI_API_KEY = "AIzaSyBxsNgKI-TQbKVi8qZyij9RICZJCqgOpbw"
+GEMINI_API_KEY = "GEMINI_API_KEY"
 os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
