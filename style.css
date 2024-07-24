@@ -1,0 +1,52 @@
+*{
+
+    margin: 10px;
+}
+
+
+
+
+
+input[type="textarea"]{
+    .large-text {
+        font-size: 200px;
+    }
+    padding:0;
+    background-color:#5f5a63;
+}
+
+p{
+    font-size: 1.7rem;
+    color:white;
+}
+body{
+    background: linear-gradient(to right, #010311, #569dbd);
+height: 100vh;
+
+}
+
+p {
+    line-height: 5.5;
+}
+#textbox {
+    border-radius: 25px;
+}
+#textbox::placeholder {
+    font-size: 16px; /* Adjust the size as needed */
+}
+
+button { transform: perspective(500px) translateZ(20px); }
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+
+.image-container img {
+    width: 450px;  /* Adjust the width as needed */
+    height: 450px;  /* Adjust the height as needed */
+    box-shadow: 10px 10px 20px black;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage1</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(to bottom, black, #000000); /* Linear gradient from black to dark black */
+        }
+        
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-5deg);
+            transform-origin: center center;
+            overflow: hidden;
+        }
+        
+        .collage-item {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 5px solid black; /* Black border around each image */
+            filter: brightness(0.5); /* Darken images */
+            animation: scaleAnimation 3s infinite;
+        }
+        
+        /* Keyframe animation for scaling in and out */
+        @keyframes scaleAnimation {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        
+        @keyframes reverseScaleAnimation {
+            0%, 100% {
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Delay animation for each item */
+        .collage-item:nth-child(odd) {
+            animation: scaleAnimation 10s infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        .collage-item:nth-child(even) {
+            animation: reverseScaleAnimation 10s infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        /* Positioning the items in the grid */
+        .collage-item:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+        .collage-item:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .collage-item:nth-child(3) { grid-column: 3 / 4; grid-row: 1 / 2; }
+        .collage-item:nth-child(4) { grid-column: 4 / 5; grid-row: 1 / 2; }
+        .collage-item:nth-child(5) { grid-column: 5 / 6; grid-row: 1 / 2; }
+        
+        .collage-item:nth-child(6) { grid-column: 1 / 2; grid-row: 2 / 3; }
+        .collage-item:nth-child(7) { grid-column: 2 / 3; grid-row: 2 / 3; }
+        .collage-item:nth-child(8) { grid-column: 3 / 4; grid-row: 2 / 3; }
+        .collage-item:nth-child(9) { grid-column: 4 / 5; grid-row: 2 / 3; }
+        .collage-item:nth-child(10) { grid-column: 5 / 6; grid-row: 2 / 3; }
+        
+        .collage-item:nth-child(11) { grid-column: 1 / 2; grid-row: 3 / 4; }
+        .collage-item:nth-child(12) { grid-column: 2 / 3; grid-row: 3 / 4; }
+        .collage-item:nth-child(13) { grid-column: 3 / 4; grid-row: 3 / 4; }
+        .collage-item:nth-child(14) { grid-column: 4 / 5; grid-row: 3 / 4; }
+        .collage-item:nth-child(15) { grid-column: 5 / 6; grid-row: 3 / 4; }
+        
+        .para {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            z-index: 10;
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: 900;
+            unicode-bidi: isolate;
+            font-size: 62px;
+            letter-spacing: -0.07em;
+        }
+        
+        .para span {
+            display: inline-block;
+            animation: popUp 1s ease forwards;
+            opacity: 0;
+            filter: brightness(8);
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: translateY(-100px) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(20px) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+        .nowrap{
+            white-space: nowrap;
+        }
+        .para span:nth-child(1) { animation-delay: 0s; }
+        .para span:nth-child(2) { animation-delay: 0.1s; }
+        .para span:nth-child(3) { animation-delay: 0.2s; }
+        .para span:nth-child(4) { animation-delay: 0.3s; }
+        .para span:nth-child(5) { animation-delay: 0.4s; }
+        .para span:nth-child(6) { animation-delay: 0.5s; }
+        .para span:nth-child(7) { animation-delay: 0.6s; }
+        .para span:nth-child(8) { animation-delay: 0.7s; }
+        .para span:nth-child(9) { animation-delay: 0.8s; }
+        .para span:nth-child(10) { animation-delay: 0.9s; }
+        .para span:nth-child(11) { animation-delay: 1s; }
+        .para span:nth-child(12) { animation-delay: 1.1s; }
+        .para span:nth-child(13) { animation-delay: 1.2s; }
+        .para span:nth-child(14) { animation-delay: 1.3s; }
+        .para span:nth-child(15) { animation-delay: 1.4s; }
+        .para span:nth-child(16) { animation-delay: 1.5s; }
+        .para span:nth-child(17) { animation-delay: 1.6s; }
+        .para span:nth-child(18) { animation-delay: 1.7s; }
+        .para span:nth-child(19) { animation-delay: 1.8s; }
+        .para span:nth-child(20) { animation-delay: 1.9s; }
+
+        
+        #arrow-button{                                                                    
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            background: transparent;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+
+        #arrow-button:hover {
+            color: wheat;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        </style>
+    </head>
+
+<body>
+    <div class="collage-container">
+        <div class="collage-item" style="background-image: url('images/image1.jpeg.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image2.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image3.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image4.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image5.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image6.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image7.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image8.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image9.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image10.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image11.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image12.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image13.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image14.jpg');"></div>
+        <div class="collage-item" style="background-image: url('images/image15.jpg');"></div>
+    </div>
+
+    <section class="para">
+        <p><div class="nowrap">
+            <span>T</span>
+            <span>R</span>
+            <span>U</span>
+            <span>T</span>
+            <span>H</span>
+            <span> </span>
+            <span>S</span>
+            <span>H</span>
+            <span>I</span>
+            <span>E</span>
+            <span>L</span>
+            <span>D</span> </div>
+            <span> </span>
+            <span>A</span>
+            <span>I</span>
+            <span> </span>
+            <span>G</span>
+            <span>U</span>
+            <span>A</span>
+            <span>R</span>
+            <span>D</span>
+        
+            
+        </p>
+
+        <button id="arrow-button" onclick="navigateToPage2()">-></button>
+    </section>
+    <script>
+        function navigateToPage2(){
+            window.location.href = 'Homepage2.html'
+        }
+
+    </script>
+
+    </body>
+
+</html>
